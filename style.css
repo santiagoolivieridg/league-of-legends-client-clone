@@ -6,6 +6,11 @@
   outline: none;
 }
 
+body {
+  background: url(img/desktop-wallpaper.png);
+  background-size: cover;
+}
+
 .main-container {
   position: relative;
   width: calc(1280px / 1.2);
