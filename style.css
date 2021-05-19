@@ -4,6 +4,7 @@
   border: 0;
   box-sizing: border-box;
   outline: none;
+  text-decoration: none;
 }
 
 body {
@@ -15,7 +16,6 @@ body {
   position: relative;
   width: calc(1280px / 1.2);
   height: calc(720px / 1.2);
-  border: 1px solid lightgrey;
   background: url(img/client-background.jpg);
   background-size: contain;
 }
@@ -27,6 +27,7 @@ img[src="img/league-logo.png"] {
 }
 
 .aside-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,6 +57,10 @@ h1 {
   margin-bottom: 16px;
 }
 
+.form input:hover {
+  background-color: #e7e7e7;
+}
+
 .form input::placeholder {
   color: #7f7f7f;
   text-transform: uppercase;
@@ -63,6 +68,10 @@ h1 {
   font-weight: 700;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.95);
 }
 
 .form input:focus {
@@ -109,6 +118,150 @@ h1 {
 
 .white-icon {
   color: #fff;
+}
+
+.issues {
+  position: absolute;
+  bottom: 45px;
+}
+
+.issues a {
+  display: block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #7f7f7f;
+  margin-bottom: 1.5px;
+}
+
+.issues a:hover {
+  color: rgba(0, 0, 0, 0.95);
+}
+
+.question-tooltip {
+  display: flex;
+  position: absolute;
+  left: 325px;
+  top: 45px;
+}
+
+.question-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7f7f7f;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  font-size: 8px;
+  color: #fff;
+}
+
+.tooltip {
+  margin-top: -25px;
+  margin-left: 14px;
+  background-color: #fff;
+  padding: 27px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+}
+
+.tip {
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+  position: absolute;
+  left: 22px;
+  transform: rotate(45deg);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.visible {
+  visibility: visible;
+}
+
+.tooltip p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 12px;
+}
+
+/* Custom checkbox */
+
+.stay-signed {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7f7f7f;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.stay-signed input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #ededed;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.stay-signed input:checked ~ .checkmark {
+  background-color: #d13639;
+  border: 1px solid #d13639;
+}
+
+.stay-signed input:checked ~ .checkmark:hover {
+  background-color: #bc252a;
+  border: 1px solid #bc252a;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.stay-signed input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.stay-signed .checkmark:after {
+  left: 4.3px;
+  top: 1.5px;
+  width: 4px;
+  height: 8px;
+  border: solid #ededed;
+  border-width: 0 2.5px 2.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.stay-signed:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* Navigation Icons */
@@ -161,4 +314,20 @@ h1 {
 
 .settings-btn:hover {
   background-color: rgba(255, 255, 255, 0.55);
+}
+
+.version {
+  position: absolute;
+  bottom: 45px;
+  right: 45px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+
+.version:hover {
+  color: rgba(0, 0, 0, 0.95);
 }
