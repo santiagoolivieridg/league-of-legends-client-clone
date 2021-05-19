@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.main-container {
+  position: relative;
+  width: calc(1280px / 1.2);
+  height: calc(720px / 1.2);
+  border: 1px solid lightgrey;
+  background: url(img/client-background.jpg);
+  background-size: contain;
+}
+
+img[src="img/league-logo.png"] {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 60px;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  padding: 48px 56px;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.form {
+  margin-bottom: 8px;
+}
+
+.form input {
+  background-color: #ededed;
+  height: 48px;
+  width: 288px;
+  border: 2px solid #ededed;
+  border-radius: 4px;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.form input::placeholder {
+  color: #7f7f7f;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form input:focus {
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 91px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.socials__facebook {
+  background-color: #1877f2;
+}
+
+.socials__facebook:hover {
+  background-color: #0966de;
+}
+
+.socials__google {
+  background-color: #fff;
+}
+
+.socials__google:hover {
+  background-color: #ededed;
+}
+
+.socials__apple {
+  background-color: #000;
+}
+
+.white-icon {
+  color: #fff;
+}
+
+/* Navigation Icons */
+
+.navigation {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-btn:hover:not(:last-of-type) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-btn:hover:last-of-type {
+  background-color: #d13639;
+}
+
+/* Settings Icons */
+
+.settings {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.settings-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.settings-btn:hover {
+  background-color: rgba(255, 255, 255, 0.55);
+}
